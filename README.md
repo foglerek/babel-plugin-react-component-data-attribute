@@ -75,7 +75,7 @@ babel --plugins react-component-data-attribute script.js
 ### Via Node API
 
 ```js
-require('babel-core').transform('code', {
+require('@babel/core').transform('code', {
   plugins: ['react-component-data-attribute'],
 });
 ```

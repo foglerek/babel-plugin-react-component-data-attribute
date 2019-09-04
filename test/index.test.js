@@ -1,5 +1,5 @@
-import * as babel from 'babel-core';
 import {resolve} from 'path';
+import * as babel from '@babel/core';
 import babelPluginReactComponentDataAttribute from '../src';
 
 describe('babelPluginReactComponentDataAttribute()', () => {

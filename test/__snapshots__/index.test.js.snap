@@ -14,7 +14,9 @@ exports[`babelPluginReactComponentDataAttribute() adds the attribute to the firs
 
 exports[`babelPluginReactComponentDataAttribute() adds the property to React.createElement calls 1`] = `
 "function MyComponent() {
-  return React.createElement(someElement, { foo: 'bar', 'data-component': 'MyComponent'
+  return React.createElement(someElement, {
+    foo: 'bar',
+    \\"data-component\\": \\"MyComponent\\"
   });
 }"
 `;
@@ -34,6 +36,7 @@ exports[`babelPluginReactComponentDataAttribute() classes only adds attributes t
   renderAnotherThing() {
     return <div />;
   }
+
 }"
 `;
 
@@ -63,7 +66,9 @@ exports[`babelPluginReactComponentDataAttribute() does not process nodes that al
 
 exports[`babelPluginReactComponentDataAttribute() does not process nodes that already have the data attribute 2`] = `
 "function MyComponent() {
-  return React.createElement('div', { 'data-component': 'MyComponent' });
+  return React.createElement('div', {
+    'data-component': 'MyComponent'
+  });
 }"
 `;
 
@@ -94,6 +99,7 @@ exports[`babelPluginReactComponentDataAttribute() name uses the file’s basenam
   render() {
     return <div data-component=\\"MyComponent\\" />;
   }
+
 }"
 `;
 
@@ -114,6 +120,7 @@ exports[`babelPluginReactComponentDataAttribute() name uses the file’s directo
   render() {
     return <div data-component=\\"MyComponent\\" />;
   }
+
 }"
 `;
 
@@ -134,6 +141,7 @@ exports[`babelPluginReactComponentDataAttribute() name uses the variable name wh
   render() {
     return <div data-component=\\"MyComponent\\" />;
   }
+
 };"
 `;
 
@@ -232,6 +240,7 @@ exports[`babelPluginReactComponentDataAttribute() options overrides methods proc
   render() {
     return <div />;
   }
+
 }"
 `;
 
@@ -240,6 +249,7 @@ exports[`babelPluginReactComponentDataAttribute() options overrides name uses th
   render() {
     return <div data-component=\\"SomeOtherComponent\\" />;
   }
+
 }"
 `;
 
@@ -279,7 +289,7 @@ exports[`babelPluginReactComponentDataAttribute() updates intermediate assignmen
 exports[`babelPluginReactComponentDataAttribute() updates intermediate assignments as appropriate 4`] = `
 "function MyComponent() {
   const markup = React.createElement('div', {
-    'data-component': 'MyComponent'
+    \\"data-component\\": \\"MyComponent\\"
   });
   return markup;
 }"

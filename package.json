@@ -30,7 +30,7 @@
   "babel": {
     "presets": [
       [
-        "shopify/node",
+        "babel-preset-shopify/node",
         {
           "version": "6.0.0"
         }
@@ -44,14 +44,14 @@
     }
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-jest": "^20.0.3",
-    "babel-preset-shopify": "^16.0.2",
-    "eslint": "^3.19.0",
-    "eslint-plugin-shopify": "^16.0.1",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "babel-jest": "^24.9.0",
+    "babel-preset-shopify": "^20.0.0",
+    "eslint": "^6.3.0",
+    "eslint-plugin-shopify": "^30.0.1",
     "in-publish": "^2.0.0",
-    "jest": "^20.0.4"
+    "jest": "^24.9.0"
   },
   "dependencies": {}
 }
